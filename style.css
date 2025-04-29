@@ -2,6 +2,8 @@
 @import url('colors.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +26,7 @@
 
   body {
     background-color: var(--offwhite);
-    padding: 10px 20px;
+    padding: 10px 0px;
   }
   h1{
     font-weight: 500;
@@ -85,7 +87,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height: 70vh;
+    height: 80vh;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
@@ -119,3 +121,90 @@
     background-color: var(--verdeescuro);
     color: var(--offwhite);
   }
+
+  /* Sobre */
+  .container-sobre{
+    background-color: var(--verdeescuro);
+    color: var(--offwhite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding: 50px 0px;
+    font-weight: 300;
+  }
+  .container-sobre>p{
+    width: 40%;
+    font-size: 1.8rem;
+    margin-left: 50px;
+  }
+
+.container-sobre>img{
+  width: 700px;
+}
+
+.biotucunlogo-sobre{
+  font-weight: 500;
+}
+
+
+/* Sobre 2 */
+.container-sobre2{
+  color: var(--verdeescuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  padding: 50px 0px;
+  font-weight: 500;
+}
+.container-sobre2>p{
+  width: 70%;
+  font-size: 1.5rem;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+/* Gráfico*/
+.bars-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 300px;
+  position: relative;
+}
+
+.bar {
+  width: 70px;
+  background-color: var(--laranjaescuro);
+  position: relative;
+  margin: 0 20px;
+  border-radius: 5px;
+}
+
+.bar-1 {
+  height: 80px;
+}
+
+.bar-2 {
+  height: 150px;
+}
+
+.bar-3 {
+  height: 220px;
+}
+
+.bar-4 {
+  height: 280px;
+}
+
+.bar4{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bar4>p{
+  font-size: 1.3rem;
+  font-weight: 500;
+}
