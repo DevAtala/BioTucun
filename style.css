@@ -185,18 +185,22 @@
 
 .bar-1 {
   height: 80px;
+  animation: barAnimation 3s ease;
 }
 
 .bar-2 {
   height: 150px;
+  animation: barAnimation 3s ease;
 }
 
 .bar-3 {
   height: 220px;
+  animation: barAnimation 3s ease;
 }
 
 .bar-4 {
   height: 280px;
+  animation: barAnimation 3s ease;
 }
 
 .bar4{
@@ -207,4 +211,13 @@
 .bar4>p{
   font-size: 1.3rem;
   font-weight: 500;
+}
+
+@keyframes barAnimation {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%vh;
+  }
 }
