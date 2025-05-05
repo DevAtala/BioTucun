@@ -334,4 +334,150 @@ html{
   height: auto;
 }
 
+footer{
+  background-color: var(--verdeescuro);
+  color: var(--offwhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 0px;
+  font-weight: 300;
+}
+.redes>a>img{
+  width: 50px;
+  margin: 20px;
+}	
 
+/* ======= RESPONSIVIDADE ======= */
+
+@media (max-width: 768px) {
+  .containerheader {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+    height: 40vh;
+  }
+
+  .containerheader nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 30px;
+  }
+
+  .containerheader nav ul {
+    font-size: 1.1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .headerlogo {
+    height: 10rem;
+    transform: translateX(-50%) translateY(-100%);
+  }
+
+  .containerhome {
+    height:30vh;
+    padding: 2rem 1rem;
+    margin-bottom: 20vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .containerhome-txt h1 {
+    font-size: 2.25rem;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .container-sobre,
+  .container-sobre2 {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .container-sobre p,
+  .container-sobre2 p {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto 1.5rem;
+  }
+
+  .container-sobre img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .bars-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .bar {
+    width: 80%;
+    height: 1.5rem;
+  }
+
+  .bar4 p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .objetivos {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .container-objetivos {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .container {
+    width: 100% !important;
+    padding: 1rem;
+  }
+
+  .container img {
+    width: 5rem;
+    margin: 0 auto;
+  }
+
+  .txtmissao,
+  .txtvisao,
+  .txtvalores {
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .button-CTA {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+  .redes>a>img{
+    width: 30px;
+    margin: 10px;
+  }
+}
