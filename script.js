@@ -1,27 +1,48 @@
-    // Seleciona todos os elementos que serão animados
-    const elementos = document.querySelectorAll('.bar');
-        
-    // Configura o Intersection Observer
-    const observador = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // Verifica se o elemento está visível na tela
-            if (entry.isIntersecting) {
-                // Adiciona a classe que ativa a animação
-                entry.target.classList.add('barAnimation');
-            }
-        });
-    }, {
-        // Configura o quanto do elemento precisa estar visível para acionar
-        threshold: 1
-    });
-    
-    // Começa a observar cada elemento
-    if (elementos.length > 0) {
-        elementos.forEach(elemento => {
-            observador.observe(elemento);
-        });
-    } else {
-        console.error('Nenhum elemento com a classe "bar" encontrado');
-    }
+const barras = document.querySelectorAll('.bar');
 
-    AOS.init();
+const observador = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('barAnimation');
+    } else {
+      entry.target.classList.remove('barAnimation'); // reseta ao sair
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+barras.forEach(barra => observador.observe(barra));
+
+// Objetivos — click para abrir/fechar
+const cards = document.querySelectorAll('.container-objetivos .container');
+
+cards.forEach(card => {
+  const toggle = () => {
+    const isActive = card.classList.contains('active');
+
+    // Fecha todos
+    cards.forEach(c => {
+      c.classList.remove('active');
+      c.setAttribute('aria-expanded', 'false');
+    });
+
+    // Abre o clicado, se não estava aberto
+    if (!isActive) {
+      card.classList.add('active');
+      card.setAttribute('aria-expanded', 'true');
+    }
+  };
+
+  card.addEventListener('click', toggle);
+
+  // Acessibilidade: Enter e Space também abrem
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle();
+    }
+  });
+});
+
+AOS.init();
